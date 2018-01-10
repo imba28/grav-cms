@@ -1,0 +1,27 @@
+name: Alex Summer
+version: 0.1.0
+description: Grav Theme für Alex Summer aus Salzburg
+icon: rebel
+author:
+  name: MMT
+  email: mir@wurscht.at
+homepage: https://github.com/mmt/grav-theme-alex-summer
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/mmt/grav-theme-alex-summer/issues
+readme: https://github.com/mmt/grav-theme-alex-summer/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
