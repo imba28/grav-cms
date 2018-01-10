@@ -2,6 +2,10 @@
 ### Benutzung
 `php -S localhost:8080 system/router.php` für Entwicklung.
 
+Benutzer:
+    `admin`
+    `Keins123`
+
 ### Theme erstellen
 Das DevTool Plugin installieren. `bin/gpm install devtools`
 
