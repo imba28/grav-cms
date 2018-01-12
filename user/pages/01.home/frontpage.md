@@ -1,5 +1,6 @@
 ---
 title: Home
+menu: Start
 ---
 
 # Grav is Running!

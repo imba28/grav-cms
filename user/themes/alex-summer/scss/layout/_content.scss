@@ -1,0 +1,86 @@
+.hero {
+      background-image: url("/images/hero.jpg");
+      background-size: cover;
+      padding: 3em 0em;
+
+    .container {
+
+      justify-content: flex-end;
+
+      .slogan {
+          width: 40%;
+
+          span {
+              font-size: 3em;
+              line-height: 1.4em;
+              background: $white;
+              color: $primary-color;
+              padding: 0 0.5rem;
+          }
+
+          a.button {
+              margin-top: 0.5em;
+              font-size: 2em;
+          }
+      }
+   }
+}
+
+  section {
+      padding: 2em 0 0 0;
+
+      > h1 {
+          color: $primary-color;
+          font-size: 2em;
+          margin-bottom: 1em;
+          padding-left: 1rem;
+      }
+
+      article {
+          padding-right: 1em;
+          margin-bottom: 1em;
+          width: 33.33%;
+
+          &:nth-child(n + 4) {
+              margin-top: 1em;
+          }
+
+          h3 {
+              font-size: 1.5rem;
+              color: $primary-color;
+
+              margin: 1em 0 0 0;
+              text-align: center;
+          }
+
+          .inner {
+              background-color: $gray;
+              padding: 2em;
+              height: 100%;
+          }
+
+          img {
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              display: block;
+          }
+      }
+
+      .articles {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 1em;
+      }
+
+      &.leistungen article {
+          h3 {
+              margin: 0 0 1em 0;
+          }
+      }
+  }
+
+  .referenzen .inner img {
+    width: 50%;
+    border-radius: 50%;
+  }

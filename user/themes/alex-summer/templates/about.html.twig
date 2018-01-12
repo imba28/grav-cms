@@ -1,0 +1,21 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block hero %}
+    <section class="about-hero">
+      <h1>{{ page.header.headline }}</h1>
+      <h2>{{ page.header.subline }}</h2>
+    </section>
+{% endblock %}
+{% block content %}
+    <section class="about">
+        {% if page.header.avatar %}
+            {{ page.media.images[page.header.avatar] }}
+        {% endif %}
+        <article>
+          <h1>{{ page.title }}</h1>
+          <p>
+            {{ page.content }}
+          </p>
+        </article>
+    </section>
+{% endblock %}

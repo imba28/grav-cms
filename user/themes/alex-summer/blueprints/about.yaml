@@ -1,0 +1,29 @@
+title: About
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        blog:
+          type: tab
+          title: Theme
+
+          fields:
+
+            header.headline:
+              type: text
+              label: Headline
+
+            header.subline:
+              type: text
+              label: Subline
+
+            header.avatar:
+              type: filepicker
+              label: Avatar
+              preview_images: true
+              folder: '@self'
+              help: image filename that exists in the page folder. If not provided, will use the first image found.

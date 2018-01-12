@@ -1,0 +1,13 @@
+email: mir@wurscht.at
+fullname: 'John Snow'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$iaNdXcP2wjA.7w358oYzNOqKAtw3yG6nY/WSKMNK2c2Za/gUokHTS
+authorized: true
+twofa_secret: ZLNNMHCQBCBXI3UVVYFMBG4S7I2CVACC
