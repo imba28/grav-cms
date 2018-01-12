@@ -1,7 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block header %}
-    {{ parent() }}
+{% block hero %}
     <section class="hero flex" style="background-image: url({{ url("theme:///images/hero.jpg") }}">
         <div class="container flex">
             <div class="slogan">
@@ -16,7 +15,6 @@
 
 {% block content %}
     {# page.content #}
-
     <section class="leistungen">
         <h1>Leistungen</h1>
         <div class="articles">
