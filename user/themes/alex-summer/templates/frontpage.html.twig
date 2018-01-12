@@ -2,7 +2,7 @@
 
 {% block header %}
     {{ parent() }}
-    <section class="hero flex" style="background-image: url({{ url("theme:///images/hero.jpg") }})">
+    <section class="hero flex" style="background-image: url({{ url("theme:///images/hero.jpg") }}">
         <div class="container flex">
             <div class="slogan">
                 <span>Webdesign mit Sinn und Zweck und XYZ</span>
@@ -49,53 +49,61 @@
     <section class="news">
         <h1>News</h1>
         <div class="articles">
+            {% set news_collection = page.collection({
+                items: {
+                    '@page.children': '/news'
+                },
+                'limit': 3,
+                'order': {
+                    'by': 'date',
+                    'dir': 'desc'
+                },
+            }) %}
+            {% for p in news_collection %}
+                {% if p.header.header_image %}
+                    {% set header_image =  p.media.images[p.header.header_image].url %}
+                {% else %}
+                    {% set header_image = 'http://via.placeholder.com/150x150' %}
+                {% endif %}
             <article>
                 <div class="inner">
-                    <a href="javascript:void(0)">
-                        <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
-                        <h3>Überraschend, Microsoft verkündet Windows-Aus!</h3>
+                    <a href="{{ p.url }}">
+                        <img src="{{ header_image }}" alt="placeholder"/>
+                        <h3>{{ p.title }}</h3>
                     </a>
                 </div>
             </article>
-            <article>
-                <div class="inner">
-                    <a href="javascript:void(0)">
-                        <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
-                        <h3>Mondlandung war fake! Neue Beweise!</h3>
-                    </a>
-                </div>
-            </article>
-            <article>
-                <div class="inner">
-                    <a href="javascript:void(0)">
-                        <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
-                        <h3>Elvis Presley doch von Aliens enführt!</h3>
-                    </a>
-                </div>
-            </article>
+            {% endfor %}
         </div>
     </section>
     <section class="referenzen">
         <h1>Referenzen</h1>
         <div class="articles">
+            {% set portfolio_collection = page.collection({
+                items: {
+                    '@page.children': '/portfolio'
+                },
+                'limit': 3,
+                'order': {
+                    'by': 'date',
+                    'dir': 'desc'
+                },
+            }) %}
+            {% for p in portfolio_collection %}
+                {% if p.header.header_image %}
+                    {% set header_image =  p.media.images[p.header.header_image].url %}
+                {% else %}
+                    {% set header_image = 'http://via.placeholder.com/150x150' %}
+                {% endif %}
             <article>
                 <div class="inner">
-                    <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
-                    <h3>www.example.com</h3>
+                    <a href="{{ p.url }}">
+                        <img src="{{ header_image }}" alt="placeholder"/>
+                        <h3>{{ p.title }}</h3>
+                    </a>
                 </div>
             </article>
-            <article>
-                <div class="inner">
-                    <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
-                    <h3>www.example1.com</h3>
-                </div>
-            </article>
-            <article>
-                <div class="inner">
-                    <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
-                    <h3>www.example2.com</h3>
-                </div>
-            </article>
+            {% endfor %}
         </div>
     </section>
 {% endblock %}
