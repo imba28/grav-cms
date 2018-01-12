@@ -1,0 +1,101 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}
+    {{ parent() }}
+    <section class="hero flex" style="background-image: url({{ url("theme:///images/hero.jpg") }})">
+        <div class="container flex">
+            <div class="slogan">
+                <span>Webdesign mit Sinn und Zweck und XYZ</span>
+                <div>
+                    <a href="javascript:void(0)" class="button d-i-block">Angebot einholen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    {# page.content #}
+
+    <section class="leistungen">
+        <h1>Leistungen</h1>
+        <div class="articles">
+            <article>
+                <div class="inner">
+                    <h3>Design</h3>
+                    <div class="icon">
+                        <img src="{{ url("theme://images/design.png") }}" alt="design-icon"/>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="inner">
+                    <h3>Strategie</h3>
+                    <div class="icon">
+                        <img src="{{ url("theme://images/strategy.png") }}" alt="strategy-icon"/>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="inner">
+                    <h3>Consulting</h3>
+                    <div class="icon">
+                        <img src="{{ url("theme://images/consulting.png") }}" alt="consulting-icon"/>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="news">
+        <h1>News</h1>
+        <div class="articles">
+            <article>
+                <div class="inner">
+                    <a href="javascript:void(0)">
+                        <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
+                        <h3>Überraschend, Microsoft verkündet Windows-Aus!</h3>
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="inner">
+                    <a href="javascript:void(0)">
+                        <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
+                        <h3>Mondlandung war fake! Neue Beweise!</h3>
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="inner">
+                    <a href="javascript:void(0)">
+                        <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
+                        <h3>Elvis Presley doch von Aliens enführt!</h3>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="referenzen">
+        <h1>Referenzen</h1>
+        <div class="articles">
+            <article>
+                <div class="inner">
+                    <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
+                    <h3>www.example.com</h3>
+                </div>
+            </article>
+            <article>
+                <div class="inner">
+                    <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
+                    <h3>www.example1.com</h3>
+                </div>
+            </article>
+            <article>
+                <div class="inner">
+                    <img src="http://via.placeholder.com/150x150" alt="placeholder"/>
+                    <h3>www.example2.com</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock %}
