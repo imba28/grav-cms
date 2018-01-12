@@ -24,8 +24,8 @@
             {{ assets.css() }}
 
             {% block javascripts %}
-                {% do
-                    assets.addJs('jquery', 100) %}
+                {% do assets.addJs('jquery', 101) %}
+                {% do assets.addJs('theme://js/app.js', 100) %}
             {% endblock %}
             {{ assets.js() }}
 
@@ -56,25 +56,17 @@
 
         {% block body %}
             <section id="body">
-                <div class="wrapper padding">
+                <div class="container">
                     {% block content %}{% endblock %}
                 </div>
             </section>
         {% endblock %}
 
         {% block footer %}
-            <div class="footer text-center">
-                <div class="wrapper padding">
-                    <p>
-                        <a href="http://getgrav.org">Grav</a>
-                        was
-                        <i class="fa fa-code"></i>
-                        with
-                        <i class="fa fa-heart"></i>
-                        by
-                        <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
-                </div>
-            </div>
+        <footer>
+           <p>&copy; 2017 Alex Sumner, Webdesigner in Salzburg
+       </footer>
+
         {% endblock %}
 
         {% block bottom %}
