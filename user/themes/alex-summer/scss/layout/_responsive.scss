@@ -1,0 +1,152 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 80em) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    header {
+        h1.logo {
+            font-size: 2em;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .mainmenu__burger { display: none; }
+
+  .mainmenu--show {
+    right: 0 !important;
+    transition: none;
+  }
+
+  .mainmenu__dropdown-bg {
+    display: none;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .about {
+    article {
+      width: 100%;
+    }
+
+    img {
+      width: 75%;
+      height: 75%;
+      margin: 0 auto;
+      margin-bottom: 4em;
+    }
+  }
+
+  .mainmenu {
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    right: -100%;
+    top: $header-height;
+    transition: right 0.5s ease-out;
+    padding: 40px 0 40px 0;
+
+    li {
+
+      a {
+        color: #fff !important;
+
+        &.a--active {
+            color: #fff !important;
+            border-bottom: 2px solid #fff !important;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  header {
+    h1.logo { font-size: 2em; }
+    nav ul.mainmenu li { margin-right: 0; }
+  }
+
+  .hero .container {
+      .slogan {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      section article {
+          width: 50%;
+
+          .inner {
+              padding: 1.5em;
+          }
+      }
+   }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 550px) {
+  .about img {
+    width: 90%;
+    height: 90%;
+  }
+
+    .container {
+        section {
+            padding: 2em 2em 0;
+        }
+
+        .about {
+          padding-top: 0;
+        }
+
+        section {
+            .articles {
+                margin: 0;
+
+                article {
+                    margin-top: 1em;
+                    width: 100%;
+                    padding: 0;
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            &.leistungen .articles article {
+                padding: 0;
+
+                img {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 380px) {
+  .about img {
+    width: 100%;
+    height: 100%;
+  }
+
+    .container {
+        section {
+            padding: 2em 1em 0;
+
+            &.leistungen .articles {
+                article {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

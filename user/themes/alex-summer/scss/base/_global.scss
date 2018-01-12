@@ -1,0 +1,56 @@
+html {
+    font-family: $main-font, serif;
+    font-size: 1em;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex.flex-sp-bt {
+    justify-content: space-between;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+}
+a:hover {
+    color: $primary-color-hover;
+}
+
+a.button {
+    text-decoration: none;
+}
+.button {
+    color: $white;
+    background-color: $primary-color;
+    padding: .5em;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 rgba(255,255,255,0.15) inset;
+    position: relative;
+}
+.button:hover {
+    background-color: $primary-color-hover;
+    color: #FFF;
+}
+.button:active {
+    background-color: $primary-color-active;
+    box-shadow:
+        0 0 1em rgba(0,0,0,0.5) inset;
+    color: #ccc;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-i-block {
+    display: inline-block;
+}
+
+.d-block-center {
+    display: block;
+    margin: 0 auto;
+}
