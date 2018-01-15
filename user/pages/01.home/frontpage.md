@@ -1,6 +1,20 @@
 ---
 title: Home
 menu: Start
+news:
+    items:
+        '@page.children': /news
+    order:
+        by: date
+        dir: desc
+    limit: 3
+portfolio:
+    items:
+        '@page.children': /portfolio
+    order:
+        by: date
+        dir: desc
+    limit: 3
 ---
 
 # Grav is Running!

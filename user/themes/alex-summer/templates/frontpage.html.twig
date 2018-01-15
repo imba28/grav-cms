@@ -63,14 +63,14 @@
                 {% else %}
                     {% set header_image = 'http://via.placeholder.com/150x150' %}
                 {% endif %}
-            <article>
-                <div class="inner">
-                    <a href="{{ p.url }}">
-                        <img src="{{ header_image }}" alt="placeholder"/>
-                        <h3>{{ p.title }}</h3>
-                    </a>
-                </div>
-            </article>
+                <article>
+                    <div class="inner">
+                        <a href="{{ p.url }}">
+                            <img src="{{ header_image }}" alt="placeholder"/>
+                            <h3>{{ p.title }}</h3>
+                        </a>
+                    </div>
+                </article>
             {% endfor %}
         </div>
     </section>
