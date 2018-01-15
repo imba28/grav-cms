@@ -1,10 +1,10 @@
 # Grav Specific
 .sass-cache
 composer.lock
-cache/*
-assets/*
-logs/*
-images/*
+cache/*/**
+assets/*/**
+logs/*/**
+images/*/**
 user/data/*
 user/*/**/css-compiled
 # OS Generated
