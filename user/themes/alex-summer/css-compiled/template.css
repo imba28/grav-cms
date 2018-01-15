@@ -99,6 +99,10 @@ a.button {
   display: block;
   margin: 0 auto; }
 
+.page-default h1 {
+  font-size: 3em;
+  color: #009EE0; }
+
 *, *:after, *:before {
   box-sizing: border-box; }
 
