@@ -7,9 +7,15 @@ Seiten werden in `user/pages` gespeichert. Seiten können beliebig viele Unterse
 # ![](https://learn.getgrav.org/user/pages/02.content/01.content-pages/page-folders.png)
 
 Eine Seite wird durch eine .md Datei repräsentiert.
-z.B `/user/pages/home/home.md`
+z.B `/user/pages/home/default.md`
+Der Name der Datei legt das Template fest. Optional kann das Theme auch im Page Header überschrieben werden:
+```yaml
+---
+template: custom
+---
+```
 
-Eine Seite besteht aus Metadaten und Inhalt. Die Metadaten befinden sich zwischen den --- und stehen immer am Anfang der Datei. Hier lassen sich spezifische Einstellungen für die Seite festlegen.
+Eine Seite besteht aus Header und Inhalt. Die Header Einstellungen befinden sich zwischen den --- und stehen immer am Anfang der Datei. Hier lassen sich spezifische Einstellungen für die jeweilige Seite festlegen.
 Der Inhalt der Seiten ist als Markdown gespeichert und steht nach dem schließenden ---.
 
 __Beispiel__
