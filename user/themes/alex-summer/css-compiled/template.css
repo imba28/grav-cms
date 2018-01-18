@@ -56,6 +56,10 @@ html {
   font-family: "Slabo 13px", serif;
   font-size: 1em; }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
 .flex {
   display: flex; }
 
@@ -102,6 +106,23 @@ a.button {
 .page-default h1 {
   font-size: 3em;
   color: #009EE0; }
+
+#item .list-blog-header .list-blog-date, #listing .list-blog-header .list-blog-date {
+  color: #aaa;
+  margin-bottom: 1em;
+  display: block; }
+#item .list-blog-header .p-name, #listing .list-blog-header .p-name {
+  font-size: 2em;
+  margin-bottom: .5em; }
+#item .prev-next, #listing .prev-next {
+  margin-top: 2em; }
+#item .list-blog-padding, #listing .list-blog-padding {
+  margin-top: 1em; }
+#item .read-more, #listing .read-more {
+  margin-top: 1em;
+  display: block; }
+#item .list-item, #listing .list-item {
+  margin-bottom: 4em; }
 
 *, *:after, *:before {
   box-sizing: border-box; }

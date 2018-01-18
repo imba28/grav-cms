@@ -4,3 +4,34 @@
         color: $primary-color;
     }
 }
+
+#item, #listing {
+    .list-blog-header {
+        .list-blog-date {
+            color: #aaa;
+            margin-bottom: 1em;
+            display: block;
+        }
+
+        .p-name {
+            font-size: 2em;
+            margin-bottom: .5em;
+        }
+    }
+    .prev-next {
+        margin-top: 2em;
+    }
+
+    .list-blog-padding {
+        margin-top: 1em;
+    }
+
+    .read-more {
+        margin-top: 1em;
+        display: block;
+    }
+
+    .list-item {
+        margin-bottom: 4em;
+    }
+}
