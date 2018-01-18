@@ -13,7 +13,7 @@
             display: block;
         }
 
-        .p-name {
+        h1 {
             font-size: 2em;
             margin-bottom: .5em;
         }
@@ -33,5 +33,14 @@
 
     .list-item {
         margin-bottom: 4em;
+    }
+
+    .p-category {
+        margin-right: .5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+        margin: 2em 0 .5em 0;
     }
 }

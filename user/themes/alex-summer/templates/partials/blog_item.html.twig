@@ -12,23 +12,16 @@
             </time>
         </span>
         {% if page.header.link %}
-            <h4 class="p-name">
+            <h1 class="p-name">
                 {% if page.header.continue_link is not sameas(false) %}
                 <a href="{{ page.url }}"><i class="fa fa-angle-double-right u-url"></i></a>
                 {% endif %}
                 <a href="{{ page.header.link }}" class="u-url">{{ page.title }}</a>
-            </h4>
+            </h1>
         {% else %}
-            <h4 class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></h4>
+            <h1 class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></h1>
         {% endif %}
 
-        {% if page.taxonomy.tag %}
-        <span class="tags">
-            {% for tag in page.taxonomy.tag %}
-            <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">{{ tag }}</a>
-            {% endfor %}
-        </span>
-        {% endif %}
         {% if header_image %}
             {% if header_image_file %}
                 {% set header_image_media = page.media.images[header_image_file] %}
@@ -63,6 +56,16 @@
         <div class="e-content">
             {{ page.content }}
         </div>
+        {% if not trunacte %}
+            {% if page.taxonomy.tag %}
+            <h4>Tags</h4>
+            <span class="tags">
+                {% for tag in page.taxonomy.tag %}
+                <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">{{ tag }}</a>
+                {% endfor %}
+            </span>
+            {% endif %}
+        {% endif %}
 
         {% if config.plugins.comments.enabled %}
             {% include 'partials/comments.html.twig' %}
