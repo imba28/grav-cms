@@ -129,7 +129,7 @@ portfolio:
 
 ###### frontpage.html.twig:
 
-```html
+```twig
 {% extends 'partials/base.html.twig' %}
 
 {% block hero %}
@@ -146,7 +146,6 @@ portfolio:
 {% endblock %}
 
 {% block content %}
-    {# page.content #}
     <section class="leistungen">
         <h1>Leistungen</h1>
         <div class="articles">
@@ -223,7 +222,7 @@ portfolio:
 __Über mich Seite__
 ###### about.html.twig:
 
-```html
+```twig
 {% extends 'partials/base.html.twig' %}
 
 {% block hero %}
