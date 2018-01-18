@@ -1,8 +1,8 @@
 title: 'Alex Summer'
-default_lang: en
+default_lang: de
 author:
-  name: 'Joe Bloggs'
-  email: joe@test.com
+  name: 'John Snow'
+  email: john@test.com
 taxonomies:
   - category
   - tag
